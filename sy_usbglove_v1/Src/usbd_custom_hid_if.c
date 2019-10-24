@@ -53,6 +53,8 @@
 /* USER CODE BEGIN INCLUDE */
 #include <string.h>
 #include "thread_usbframe_process.h"
+
+extern uint8_t calibration_cmd_global;
 /* USER CODE END INCLUDE */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -307,6 +309,22 @@ static int8_t CUSTOM_HID_OutEvent_FS(uint8_t *event_idx)
 //		USBD_CUSTOM_HID_SendReport(&hUsbDeviceFS, temp, 3);
 	}
 	
+	char *proof = strstr((char *)temp, "proof");
+	if(proof != NULL)
+	{
+		if(*(proof + 6) == '0')
+		{
+			calibration_cmd_global = 0;
+		}
+		else if(*(proof + 6) == '1')
+		{
+			calibration_cmd_global = 1;
+		}
+		else
+		{
+			calibration_cmd_global = 2;
+		}
+	}
 //	printf("%s", temp);
   return (USBD_OK);
   /* USER CODE END 6 */

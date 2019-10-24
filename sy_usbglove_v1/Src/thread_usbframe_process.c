@@ -61,8 +61,9 @@ uint8_t received_dataframe_process(void *dat, uint8_t len)
 	{
 		const struct imu_msg_t *imu = dat;
 		
-		mouse_state.x = (int8_t)((last_angle.roll - imu->angle[1])/1000*20);
-		mouse_state.y = (int8_t)((last_angle.pitch - imu->angle[0])/1000*20);
+//		float pitch, roll, yaw;
+		mouse_state.y = (int8_t)(((last_angle.pitch * 1.0 / (1<<16)) - (imu->pitch * 1.0 / (1<<16))) * 12);
+		mouse_state.x = (int8_t)((last_angle.yaw * 1.0 / (1<<16) - imu->yaw * 1.0 / (1<<16)) * 12);
 		
 		usb_send_struct *send = usb_dataframe_alloc(sizeof(usb_send_struct));
 		if(send)
@@ -74,10 +75,14 @@ uint8_t received_dataframe_process(void *dat, uint8_t len)
 		}
 		
 		
-		memcpy(&last_angle, imu->angle, sizeof(imu->angle));
+		last_angle.pitch = imu->pitch;
+		last_angle.roll = imu->roll;
+		last_angle.yaw = imu->yaw;
+		
+//		memcpy(&last_angle, (long*)imu->pitch, sizeof(last_angle));
 		
 		memcpy(adc_value, imu->glove_adc, sizeof(adc_value));
-		update_glove_angle(adc_value);
+//		update_glove_angle(adc_value);
 	}
 	
 	return ret;

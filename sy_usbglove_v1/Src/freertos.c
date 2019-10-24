@@ -61,9 +61,8 @@
 #include "usart.h"
 
 #include "thread_usbframe_process.h"
-#include "thread_mouse_frame.h"
-#include "thread_glove_frame.h"
 #include "thread_frame_send.h"
+#include "thread_ble_transfer.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -129,8 +128,8 @@ void MX_FREERTOS_Init(void) {
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* definition and creation of myTask02 */
-  osThreadDef(myTask02, StartTask02, osPriorityNormal, 0, 128);
-  myTask02Handle = osThreadCreate(osThread(myTask02), NULL);
+//  osThreadDef(myTask02, StartTask02, osPriorityNormal, 0, 128);
+//  myTask02Handle = osThreadCreate(osThread(myTask02), NULL);
 
   /* definition and creation of myTask03 */
 //  osThreadDef(myTask03, StartTask03, osPriorityNormal, 0, 128);
@@ -138,8 +137,9 @@ void MX_FREERTOS_Init(void) {
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
-//	init_thread_usbframe_process();
-//	init_thread_frame_send();
+	init_thread_usbframe_process();
+	init_thread_frame_send();
+	init_thread_ble_transfer();
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_QUEUES */

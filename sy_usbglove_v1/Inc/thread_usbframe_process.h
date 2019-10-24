@@ -44,16 +44,60 @@ enum evt_id_t{
 	evt_id_max,
 };
 
+enum cmd_id_t{
+	calibration_cmd = cmd_id_min,
+};
+
 struct uart_head_t{
 	uint8_t serial_tail_h;
 	uint8_t serial_tail_l;
 	uint8_t type;
-	uint8_t body_len;
+	uint8_t body_len;	
 };
 
-struct data_host_uart_rx_t{
+struct data_host_uart_tx_t{
 	struct uart_head_t head;
-	uint16_t glove_adc[5];
+	uint16_t adc[5];
+};
+
+struct rawdata_tx_cmd_t{
+	struct uart_head_t head;
+	uint16_t adc_value[5];
+};
+
+struct calibration_resualt_t{
+	struct uart_head_t head;
+	uint16_t tx_buff;
+};
+
+struct calibration_data_t{
+	struct uart_head_t head;
+	uint16_t tx_buff[10];
+};
+
+struct software_version_t{
+	struct uart_head_t head;
+	uint16_t tx_buff[3];
+};
+
+struct machinary_id_t{
+	struct uart_head_t head;
+	uint16_t tx_buff[2];
+};
+
+struct calibration_cmd_t{
+	struct uart_head_t head;	
+	uint16_t cmd;
+};
+
+struct serial_calibration_noti_t{
+	struct uart_head_t head;	
+};
+
+struct gloves_msg_process_func_t{
+	uint8_t id;
+	uint8_t body_len;
+	const void *ptr;
 };
 
 //IMU:
@@ -61,14 +105,16 @@ struct imu_msg_t{
 	struct uart_head_t head;
 //	int16_t acc[3];
 //	int16_t velo[3];
-	int16_t angle[3];
+	long	pitch;
+	long	roll;
+	long	yaw;
 	uint16_t glove_adc[5];
 };
 
 typedef struct angle_imu_tag{
-	int16_t	pitch;
-	int16_t roll;
-	int16_t yaw;
+	long	pitch;
+	long	roll;
+	long	yaw;
 }imu_angle_t;
 
 typedef struct usb_head_tag{

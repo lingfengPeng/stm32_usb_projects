@@ -18,16 +18,23 @@ void thread_frame_send(void const * argument)
 		while(hhid->state == CUSTOM_HID_IDLE)
 		{
 			osEvent evt = osMailGet(mailid_of_usb_tx, 0);
-			uint8_t len = 0;
+			
 			
 			if(evt.status == osEventMail && evt.value.p != NULL)
 			{
 				usb_send_struct *send = evt.value.p;
-				len = send->size;
+				
 				
 				if(1)//(transfer_state == Transmit_Running)
 				{
-//					USBD_CUSTOM_HID_SendReport(&hUsbDeviceFS, (uint8_t*)send, len + 1);
+					if(send->reportid == MOUSE_REPORT_ID)
+					{
+						USBD_CUSTOM_HID_SendReport(&hUsbDeviceFS, 0, (uint8_t *)send->data, send->size);
+					}
+					else if(send->reportid == GLOVE_REPORT_ID)
+					{
+						USBD_CUSTOM_HID_SendReport(&hUsbDeviceFS, 1, (uint8_t *)send->data, send->size);
+					}
 				}
 				
 				osMailFree(mailid_of_usb_tx, send);

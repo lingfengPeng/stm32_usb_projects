@@ -466,6 +466,11 @@
               <FileType>1</FileType>
               <FilePath>..\Src\thread_frame_send.c</FilePath>
             </File>
+            <File>
+              <FileName>thread_ble_transfer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\thread_ble_transfer.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

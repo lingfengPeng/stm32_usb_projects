@@ -1,5 +1,4 @@
 /*
-reset “CUSTOM_HID_ReportDesc_FS[USBD_CUSTOM_HID_REPORT_DESC_SIZE]” as :
 	// Usb HID report descriptor. //
 __ALIGN_BEGIN static uint8_t CUSTOM_HID_ReportDesc_FS[USBD_CUSTOM_HID_REPORT_DESC_SIZE] __ALIGN_END =
 {
@@ -7,7 +6,6 @@ __ALIGN_BEGIN static uint8_t CUSTOM_HID_ReportDesc_FS[USBD_CUSTOM_HID_REPORT_DES
   0x05,   0x01,
   0x09,   0x02,
   0xA1,   0x01,
-	0x85,		0x01,
   0x09,   0x01,
   
   0xA1,   0x00,
@@ -56,7 +54,6 @@ __ALIGN_BEGIN static uint8_t CUSTOM_HID_ReportDesc_FS[USBD_CUSTOM_HID_REPORT_DES
 	0x09, 0x20,
 	0xa1, 0x01,
 	
-	0x85, 0x02,
 	0x09, 0x00,
 	0x15, 0x00,
 	0x35, 0x00,
@@ -78,8 +75,7 @@ __ALIGN_BEGIN static uint8_t CUSTOM_HID_ReportDesc_FS[USBD_CUSTOM_HID_REPORT_DES
 	蓝牙芯片MAC:
 		发送器（主机）+MAC:9CA525250DD1
 		接收器（从机）+MAC:9CA525250DD2
-		蓝牙必须工作在SPP模式。
-		蓝牙连接前不能MCU不能往UART发送数据。
+		
 	
 	与主机通讯借口：
 		数据格式：
@@ -95,7 +91,11 @@ __ALIGN_BEGIN static uint8_t CUSTOM_HID_ReportDesc_FS[USBD_CUSTOM_HID_REPORT_DES
 		开始/停止数据传输		transmission	0：停止，1：开始										android->MCU
 
 
-
+	@注意：
+		蓝牙必须工作在SPP模式，BLE模式无法接收连续的0。
+		蓝牙连接前不能MCU不能往UART发送数据。
+		鼠标模拟两个接口，每个接口的端点不能复用
+	
 	
 AdapterV1.0
 */

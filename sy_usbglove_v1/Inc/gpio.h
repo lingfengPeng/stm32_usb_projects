@@ -63,7 +63,8 @@
 /* USER CODE END Includes */
 
 /* USER CODE BEGIN Private defines */
-
+#define BLE_RST_Pin GPIO_PIN_14
+#define BLE_RST_GPIO_Port GPIOB
 /* USER CODE END Private defines */
 
 void MX_GPIO_Init(void);

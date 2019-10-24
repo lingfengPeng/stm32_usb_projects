@@ -59,9 +59,7 @@ sy_usbglove_v1\freertos.o: ../Inc/usart.h
 sy_usbglove_v1\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 sy_usbglove_v1\freertos.o: ../Inc/thread_usbframe_process.h
 sy_usbglove_v1\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
-sy_usbglove_v1\freertos.o: ../Inc/thread_mouse_frame.h
-sy_usbglove_v1\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
-sy_usbglove_v1\freertos.o: ../Inc/thread_glove_frame.h
-sy_usbglove_v1\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 sy_usbglove_v1\freertos.o: ../Inc/thread_frame_send.h
+sy_usbglove_v1\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+sy_usbglove_v1\freertos.o: ../Inc/thread_ble_transfer.h
 sy_usbglove_v1\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h

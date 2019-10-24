@@ -84,6 +84,15 @@ void MX_GPIO_Init(void)
 	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 	
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_RESET);
+	
+	/*Configure GPIO pin : PtPin */
+  GPIO_InitStruct.Pin = BLE_RST_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+  HAL_GPIO_Init(BLE_RST_GPIO_Port, &GPIO_InitStruct);
+	
+	HAL_GPIO_WritePin(BLE_RST_GPIO_Port, BLE_RST_Pin, GPIO_PIN_SET);
 
 	/* USER CODE END 2 */
 
