@@ -59,6 +59,7 @@
 #include "usbd_customhid.h"
 #include "usb_device.h"
 #include "usart.h"
+#include "gpio.h"
 
 #include "thread_usbframe_process.h"
 #include "thread_frame_send.h"
@@ -72,17 +73,26 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+typedef enum ble_status
+{
+	POWER_ON,
+	CONNECTED,
+	DISCONNECTED,
+}enum_Ble_Status_TypeDef;
+
+enum_Ble_Status_TypeDef ble_status = CONNECTED;
+
 
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-uint8_t rep[5] = {0};
+
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-
+uint32_t connected_tick;
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
 osThreadId myTask02Handle;
@@ -128,8 +138,8 @@ void MX_FREERTOS_Init(void) {
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* definition and creation of myTask02 */
-//  osThreadDef(myTask02, StartTask02, osPriorityNormal, 0, 128);
-//  myTask02Handle = osThreadCreate(osThread(myTask02), NULL);
+  osThreadDef(myTask02, StartTask02, osPriorityNormal, 0, 128);
+  myTask02Handle = osThreadCreate(osThread(myTask02), NULL);
 
   /* definition and creation of myTask03 */
 //  osThreadDef(myTask03, StartTask03, osPriorityNormal, 0, 128);
@@ -171,6 +181,7 @@ void StartDefaultTask(void const * argument)
 		HAL_UART_Receive_DMA(&huart1, UART_Frame.RxBuff, MAX_UART_BUF_LEN);
 		for(;;)
 		{
+			
 			osDelay(osWaitForever);
 		}
 		
@@ -191,14 +202,49 @@ void StartTask02(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-		rep[0] = 0;
-		rep[2] += 10;
-		USBD_CUSTOM_HID_SendReport(&hUsbDeviceFS, 0, rep, 4);
-		osDelay(100);
-		
-		uint8_t string[] = "adc,100,110,120,130,140\r\n";
-		
-		USBD_CUSTOM_HID_SendReport(&hUsbDeviceFS, 1, string, sizeof(string));
+		switch	(ble_status)
+		{
+			case POWER_ON:
+				if(IS_BLE_CONNECTED(BLE_CONNECTED_STATE_PIN))
+				{
+					ble_status = CONNECTED;
+				}
+				else
+				{
+					BLE_Reset();
+					ble_status = CONNECTED;
+				}
+			break;
+			
+			case CONNECTED:
+				if(IS_BLE_CONNECTED(BLE_CONNECTED_STATE_PIN) == 0)
+				{
+					connected_tick = HAL_GetTick();
+					ble_status = DISCONNECTED;
+				}
+				
+			break;
+			
+			case	DISCONNECTED:
+				if(IS_BLE_CONNECTED(BLE_CONNECTED_STATE_PIN))
+				{
+					ble_status = CONNECTED;
+				}
+				else
+				{
+					if(HAL_GetTick() - connected_tick > 120000)
+					{
+						BLE_Reset();
+						ble_status = CONNECTED;
+					}
+				}
+				
+			break;
+			
+			default:
+				ble_status = CONNECTED;
+				break;
+		}
 		osDelay(100);
   }
   /* USER CODE END StartTask02 */

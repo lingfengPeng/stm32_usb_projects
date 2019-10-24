@@ -57,6 +57,8 @@ sy_usbglove_v1\freertos.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/u
 sy_usbglove_v1\freertos.o: ../Inc/usb_device.h
 sy_usbglove_v1\freertos.o: ../Inc/usart.h
 sy_usbglove_v1\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+sy_usbglove_v1\freertos.o: ../Inc/gpio.h
+sy_usbglove_v1\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 sy_usbglove_v1\freertos.o: ../Inc/thread_usbframe_process.h
 sy_usbglove_v1\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 sy_usbglove_v1\freertos.o: ../Inc/thread_frame_send.h

@@ -59,12 +59,20 @@
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "cmsis_os.h"
 /* USER CODE END Includes */
 
 /* USER CODE BEGIN Private defines */
 #define BLE_RST_Pin GPIO_PIN_14
 #define BLE_RST_GPIO_Port GPIOB
+
+#define BLE_WORK_PIN	GPIO_PIN_12
+#define BLE_WORK_GPIO_Port GPIOB
+
+#define BLE_CONNECTED_STATE_PIN	 (HAL_GPIO_ReadPin(BLE_WORK_GPIO_Port, BLE_WORK_PIN))
+#define IS_BLE_CONNECTED(x) ((x) ? (0) : (1))
+
+void BLE_Reset(void);
 /* USER CODE END Private defines */
 
 void MX_GPIO_Init(void);

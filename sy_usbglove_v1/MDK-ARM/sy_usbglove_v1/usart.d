@@ -46,4 +46,5 @@ sy_usbglove_v1\usart.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue
 sy_usbglove_v1\usart.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 sy_usbglove_v1\usart.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 sy_usbglove_v1\usart.o: ../Inc/gpio.h
+sy_usbglove_v1\usart.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 sy_usbglove_v1\usart.o: ../Inc/dma.h

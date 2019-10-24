@@ -1,2 +1,6 @@
 /Drivers/
 /.mxproject
+/.o
+/.d
+/.crf
+/.dep

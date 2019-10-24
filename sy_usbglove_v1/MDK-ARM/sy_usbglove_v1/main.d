@@ -54,3 +54,4 @@ sy_usbglove_v1\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 sy_usbglove_v1\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 sy_usbglove_v1\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h
 sy_usbglove_v1\main.o: ../Inc/gpio.h
+sy_usbglove_v1\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
