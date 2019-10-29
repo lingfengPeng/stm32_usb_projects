@@ -173,7 +173,6 @@ void USART1_IDLE_IRQHandler(UART_HandleTypeDef *huart)
 			HAL_UART_DMAStop(huart);
 			UART_Frame.Rx_Size = MAX_UART_BUF_LEN - huart->hdmarx->Instance->CNDTR;
 			UART_Frame.Rx_Flag = 1;
-	//		osSignalSet(UART_Frame.UART_Handle_Thread, UART_Frame.Rx_Signal);
 			HAL_UART_Receive_DMA(huart, UART_Frame.RxBuff, MAX_UART_BUF_LEN);
 		}
 		else

@@ -177,11 +177,9 @@ void StartDefaultTask(void const * argument)
 		__HAL_UART_ENABLE_IT(&huart1, UART_IT_IDLE);
 		UART_Frame.Rx_Size = MAX_UART_BUF_LEN;
 		UART_Frame.Rx_Flag = 0;
-//		UART_Frame.UART_Handle_Thread = myTask02Handle;
 		HAL_UART_Receive_DMA(&huart1, UART_Frame.RxBuff, MAX_UART_BUF_LEN);
 		for(;;)
 		{
-			
 			osDelay(osWaitForever);
 		}
 		
@@ -245,6 +243,7 @@ void StartTask02(void const * argument)
 				ble_status = CONNECTED;
 				break;
 		}
+		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_13);
 		osDelay(100);
   }
   /* USER CODE END StartTask02 */
@@ -263,14 +262,6 @@ void StartTask03(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-		
-		if(UART_Frame.Rx_Flag == 1)
-		{
-			UART_Frame.Rx_Flag = 0;
-		}
-		else
-		{
-		}
 		
     osDelay(1);
   }

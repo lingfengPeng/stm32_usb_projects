@@ -46,7 +46,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5C7F3389)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5C7F3389)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5C7F3389)
 I (../Inc/dma.h)(0x5D907509)
-I (../Inc/usart.h)(0x5DA04F83)
+I (../Inc/usart.h)(0x5DB7E47C)
 I (../Inc/usb_device.h)(0x5D90750A)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x5C7F3389)
 I (../Inc/usbd_conf.h)(0x5DA97928)
@@ -130,7 +130,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5C7F33AC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C7F33AC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C7F33AC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C7F33AC)
-F (../Src/freertos.c)(0x5DB67B44)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc-I.\RTE\_sy_usbglove_v1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sy_usbglove_v1\freertos.o --omf_browse sy_usbglove_v1\freertos.crf --depend sy_usbglove_v1\freertos.d)
+F (../Src/freertos.c)(0x5DB7E48A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc-I.\RTE\_sy_usbglove_v1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sy_usbglove_v1\freertos.o --omf_browse sy_usbglove_v1\freertos.crf --depend sy_usbglove_v1\freertos.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5DB6792C)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
@@ -184,13 +184,13 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C7F33AC)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x5C7F3389)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x5C7F3389)
 I (../Inc/usb_device.h)(0x5D90750A)
-I (../Inc/usart.h)(0x5DA04F83)
+I (../Inc/usart.h)(0x5DB7E47C)
 I (../Inc/gpio.h)(0x5DB10A6E)
 I (../Inc/thread_usbframe_process.h)(0x5DB00D1B)
 I (../Inc/thread_frame_send.h)(0x5DA58C6A)
 I (../Inc/thread_ble_transfer.h)(0x5DB011C7)
-F (../Src/usart.c)(0x5DA537F5)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc-I.\RTE\_sy_usbglove_v1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sy_usbglove_v1\usart.o --omf_browse sy_usbglove_v1\usart.crf --depend sy_usbglove_v1\usart.d)
-I (../Inc/usart.h)(0x5DA04F83)
+F (../Src/usart.c)(0x5DB7E47E)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc-I.\RTE\_sy_usbglove_v1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sy_usbglove_v1\usart.o --omf_browse sy_usbglove_v1\usart.crf --depend sy_usbglove_v1\usart.d)
+I (../Inc/usart.h)(0x5DB7E47C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C7F33AC)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5D90750B)
 I (../Inc/main.h)(0x5D90750B)
@@ -354,7 +354,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x5C7F3389)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x5C7F3389)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x5C7F3389)
 I (../Inc/usbd_desc.h)(0x5D90750A)
-F (../Src/usbd_custom_hid_if.c)(0x5DB67E17)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc-I.\RTE\_sy_usbglove_v1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sy_usbglove_v1\usbd_custom_hid_if.o --omf_browse sy_usbglove_v1\usbd_custom_hid_if.crf --depend sy_usbglove_v1\usbd_custom_hid_if.d)
+F (../Src/usbd_custom_hid_if.c)(0x5DB793A2)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc-I.\RTE\_sy_usbglove_v1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sy_usbglove_v1\usbd_custom_hid_if.o --omf_browse sy_usbglove_v1\usbd_custom_hid_if.crf --depend sy_usbglove_v1\usbd_custom_hid_if.d)
 I (../Inc/usbd_custom_hid_if.h)(0x5D90750A)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x5DA97970)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x5C7F3389)
@@ -409,8 +409,8 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5C7F3389)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5C7F3389)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5C7F3389)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5C7F3389)
-I (../Inc/usart.h)(0x5DA04F83)
-I (../Inc/thread_usb_outevent_process.h)(0x5DB682A8)
+I (../Inc/usart.h)(0x5DB7E47C)
+I (../Inc/thread_usb_outevent_process.h)(0x5DB793A2)
 F (../Src/stm32f1xx_it.c)(0x5DA43847)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc-I.\RTE\_sy_usbglove_v1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sy_usbglove_v1\stm32f1xx_it.o --omf_browse sy_usbglove_v1\stm32f1xx_it.crf --depend sy_usbglove_v1\stm32f1xx_it.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C7F33AC)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5D90750B)
@@ -457,7 +457,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5C7F3389)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5C7F3389)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5C7F3389)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5C7F3389)
-I (../Inc/usart.h)(0x5DA04F83)
+I (../Inc/usart.h)(0x5DB7E47C)
 F (../Src/stm32f1xx_hal_msp.c)(0x5D90750A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc-I.\RTE\_sy_usbglove_v1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sy_usbglove_v1\stm32f1xx_hal_msp.o --omf_browse sy_usbglove_v1\stm32f1xx_hal_msp.crf --depend sy_usbglove_v1\stm32f1xx_hal_msp.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C7F33AC)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5D90750B)
@@ -518,7 +518,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5C7F33AC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C7F33AC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C7F33AC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C7F33AC)
-F (..\Src\thread_usbframe_process.c)(0x5DB645DE)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc-I.\RTE\_sy_usbglove_v1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sy_usbglove_v1\thread_usbframe_process.o --omf_browse sy_usbglove_v1\thread_usbframe_process.crf --depend sy_usbglove_v1\thread_usbframe_process.d)
+F (..\Src\thread_usbframe_process.c)(0x5DB7E10B)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc-I.\RTE\_sy_usbglove_v1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sy_usbglove_v1\thread_usbframe_process.o --omf_browse sy_usbglove_v1\thread_usbframe_process.crf --depend sy_usbglove_v1\thread_usbframe_process.d)
 I (../Inc/thread_usbframe_process.h)(0x5DB00D1B)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5C7F3389)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5DB6792C)
@@ -565,7 +565,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C7F33AC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C7F33AC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C7F33AC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (../Inc/usart.h)(0x5DA04F83)
+I (../Inc/usart.h)(0x5DB7E47C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x5DA97970)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x5C7F3389)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x5C7F3389)
@@ -621,7 +621,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C7F33AC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C7F33AC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C7F33AC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (../Inc/usart.h)(0x5DA04F83)
+I (../Inc/usart.h)(0x5DB7E47C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x5DA97970)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x5C7F3389)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x5C7F3389)
@@ -677,7 +677,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5C7F3389)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5C7F3389)
 I (../Inc/thread_usbframe_process.h)(0x5DB00D1B)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (../Inc/usart.h)(0x5DA04F83)
+I (../Inc/usart.h)(0x5DB7E47C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x5DA97970)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x5C7F3389)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x5C7F3389)
@@ -685,8 +685,8 @@ I (../Inc/usbd_conf.h)(0x5DA97928)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x5C7F3389)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x5C7F3389)
-F (..\Src\thread_usb_outevent_process.c)(0x5DB682AA)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc-I.\RTE\_sy_usbglove_v1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sy_usbglove_v1\thread_usb_outevent_process.o --omf_browse sy_usbglove_v1\thread_usb_outevent_process.crf --depend sy_usbglove_v1\thread_usb_outevent_process.d)
-I (../Inc/thread_usb_outevent_process.h)(0x5DB682A8)
+F (..\Src\thread_usb_outevent_process.c)(0x5DB793A2)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc-I.\RTE\_sy_usbglove_v1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sy_usbglove_v1\thread_usb_outevent_process.o --omf_browse sy_usbglove_v1\thread_usb_outevent_process.crf --depend sy_usbglove_v1\thread_usb_outevent_process.d)
+I (../Inc/thread_usb_outevent_process.h)(0x5DB793A2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5C7F3389)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5DB6792C)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
@@ -733,7 +733,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C7F33AC)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C7F33AC)
 I (../Inc/thread_usbframe_process.h)(0x5DB00D1B)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (../Inc/usart.h)(0x5DA04F83)
+I (../Inc/usart.h)(0x5DB7E47C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x5DA97970)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x5C7F3389)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x5C7F3389)

@@ -71,8 +71,6 @@ typedef struct
 	uint8_t	RxBuff[MAX_UART_BUF_LEN];
 	uint16_t Rx_Size:15;
 	uint16_t Rx_Flag:1;
-	int32_t	 Rx_Signal;
-	osThreadId	UART_Handle_Thread;
 }USART_DMA_IDLE_RxTypeDef;
 
 extern	USART_DMA_IDLE_RxTypeDef	UART_Frame;
