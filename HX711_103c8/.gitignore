@@ -1,0 +1,10 @@
+/Drivers/
+/*.mxproject
+/*.o
+/*.d
+/*.crf
+/*.dep
+/*.sct
+/startup_stm32f103xb.lst
+/*.uvoptx
+/DebugConfig/

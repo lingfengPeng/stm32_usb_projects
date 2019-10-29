@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"hx711_103c8\startup_stm32f103xb.o"
+"hx711_103c8\main.o"
+"hx711_103c8\gpio.o"
+"hx711_103c8\usart.o"
+"hx711_103c8\stm32f1xx_it.o"
+"hx711_103c8\stm32f1xx_hal_msp.o"
+"hx711_103c8\delay.o"
+"hx711_103c8\hx711.o"
+"hx711_103c8\stm32f1xx_hal_gpio_ex.o"
+"hx711_103c8\stm32f1xx_hal_tim.o"
+"hx711_103c8\stm32f1xx_hal_tim_ex.o"
+"hx711_103c8\stm32f1xx_hal_uart.o"
+"hx711_103c8\stm32f1xx_hal.o"
+"hx711_103c8\stm32f1xx_hal_rcc.o"
+"hx711_103c8\stm32f1xx_hal_rcc_ex.o"
+"hx711_103c8\stm32f1xx_hal_gpio.o"
+"hx711_103c8\stm32f1xx_hal_dma.o"
+"hx711_103c8\stm32f1xx_hal_cortex.o"
+"hx711_103c8\stm32f1xx_hal_pwr.o"
+"hx711_103c8\stm32f1xx_hal_flash.o"
+"hx711_103c8\stm32f1xx_hal_flash_ex.o"
+"hx711_103c8\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "HX711_103c8\HX711_103c8.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "HX711_103c8.map" -o HX711_103c8\HX711_103c8.axf
