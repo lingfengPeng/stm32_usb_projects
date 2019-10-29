@@ -15,6 +15,7 @@
 "sy_usbglove_v1\thread_usbframe_process.o"
 "sy_usbglove_v1\thread_frame_send.o"
 "sy_usbglove_v1\thread_ble_transfer.o"
+"sy_usbglove_v1\thread_usb_outevent_process.o"
 "sy_usbglove_v1\stm32f1xx_hal_gpio_ex.o"
 "sy_usbglove_v1\stm32f1xx_hal_pcd.o"
 "sy_usbglove_v1\stm32f1xx_hal_pcd_ex.o"

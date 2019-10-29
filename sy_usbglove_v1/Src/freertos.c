@@ -266,15 +266,10 @@ void StartTask03(void const * argument)
 		
 		if(UART_Frame.Rx_Flag == 1)
 		{
-//			HAL_UART_Transmit(&huart1, UART_Frame.RxBuff, UART_Frame.Rx_Size, 10);
-//			USBD_CUSTOM_HID_SendReport(&hUsbDeviceFS, UART_Frame.RxBuff, UART_Frame.Rx_Size);
 			UART_Frame.Rx_Flag = 0;
 		}
 		else
 		{
-//			uint8_t send[] = {2, 't', 'e', 's', 't'};
-//			USBD_CUSTOM_HID_SendReport(&hUsbDeviceFS, send, sizeof(send));
-//			HAL_UART_Transmit(&huart1, send, sizeof(send), 10);
 		}
 		
     osDelay(1);

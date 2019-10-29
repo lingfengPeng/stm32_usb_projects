@@ -471,6 +471,11 @@
               <FileType>1</FileType>
               <FilePath>..\Src\thread_ble_transfer.c</FilePath>
             </File>
+            <File>
+              <FileName>thread_usb_outevent_process.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\thread_usb_outevent_process.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

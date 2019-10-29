@@ -58,3 +58,5 @@ sy_usbglove_v1\usbd_custom_hid_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/
 sy_usbglove_v1\usbd_custom_hid_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 sy_usbglove_v1\usbd_custom_hid_if.o: ../Inc/usart.h
 sy_usbglove_v1\usbd_custom_hid_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+sy_usbglove_v1\usbd_custom_hid_if.o: ../Inc/thread_usb_outevent_process.h
+sy_usbglove_v1\usbd_custom_hid_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h

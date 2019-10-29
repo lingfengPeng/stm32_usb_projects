@@ -115,10 +115,6 @@ uint8_t update_glove_angle(uint16_t *adc)
 uint32_t times;
 uint8_t calculation_adc_to_angle(uint16_t *adc, uint8_t *angle)
 {
-//	for(uint8_t i = 0; i < 5; i ++)
-//	{
-//		angle[i] = 100 + 10 * i;
-//	}
 	angle[0] = 99;
 	angle[1] = 100;
 	angle[2] = 101;

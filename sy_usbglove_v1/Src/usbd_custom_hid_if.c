@@ -53,6 +53,7 @@
 /* USER CODE BEGIN INCLUDE */
 #include <string.h>
 #include "thread_usbframe_process.h"
+#include "thread_usb_outevent_process.h"
 
 extern uint8_t calibration_cmd_global;
 /* USER CODE END INCLUDE */
@@ -293,38 +294,41 @@ static int8_t CUSTOM_HID_OutEvent_FS(uint8_t *event_idx)
 #endif
 {
   /* USER CODE BEGIN 6 */
-	uint8_t *temp	= event_idx;
-	char *stop = strstr((char *)temp, "transmission");
-	if(stop != NULL)
-	{
-		if(*(stop + 13) == '1')
-		{
-			transfer_state = Transmit_Running;
-		}
-		else
-		{
-			transfer_state = Transmit_Stop;
-		}
-		temp = (uint8_t*)"ok";
-//		USBD_CUSTOM_HID_SendReport(&hUsbDeviceFS, temp, 3);
-	}
+	memcpy(usb_outevent_buf, event_idx, USBD_CUSTOMHID_OUTREPORT_BUF_SIZE);
+	osSignalSet(usb_outevent_process_handler, SIG_OUTEVENT);
 	
-	char *proof = strstr((char *)temp, "proof");
-	if(proof != NULL)
-	{
-		if(*(proof + 6) == '0')
-		{
-			calibration_cmd_global = 0;
-		}
-		else if(*(proof + 6) == '1')
-		{
-			calibration_cmd_global = 1;
-		}
-		else
-		{
-			calibration_cmd_global = 2;
-		}
-	}
+//	uint8_t *temp	= event_idx;
+//	char *stop = strstr((char *)temp, "transmission");
+//	if(stop != NULL)
+//	{
+//		if(*(stop + 13) == '1')
+//		{
+//			transfer_state = Transmit_Running;
+//		}
+//		else
+//		{
+//			transfer_state = Transmit_Stop;
+//		}
+//		temp = (uint8_t*)"ok";
+////		USBD_CUSTOM_HID_SendReport(&hUsbDeviceFS, temp, 3);
+//	}
+//	
+//	char *proof = strstr((char *)temp, "proof");
+//	if(proof != NULL)
+//	{
+//		if(*(proof + 6) == '0')
+//		{
+//			calibration_cmd_global = 0;
+//		}
+//		else if(*(proof + 6) == '1')
+//		{
+//			calibration_cmd_global = 1;
+//		}
+//		else
+//		{
+//			calibration_cmd_global = 2;
+//		}
+//	}
 //	printf("%s", temp);
   return (USBD_OK);
   /* USER CODE END 6 */
