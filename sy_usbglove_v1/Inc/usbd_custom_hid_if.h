@@ -59,6 +59,9 @@
 #include "usbd_customhid.h"
 
 /* USER CODE BEGIN INCLUDE */
+#include <stdarg.h>
+void __attribute__((format(printf, 1, 2))) user_usb_print(const char *fmt, ...);
+#define USB_PRT(fmt, ...)	user_usb_print(fmt, ##__VA_ARGS__)
 
 /* USER CODE END INCLUDE */
 

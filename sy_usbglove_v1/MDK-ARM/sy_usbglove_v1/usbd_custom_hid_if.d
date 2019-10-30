@@ -40,6 +40,7 @@ sy_usbglove_v1\usbd_custom_hid_if.o: ../Middlewares/ST/STM32_USB_Device_Library/
 sy_usbglove_v1\usbd_custom_hid_if.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h
 sy_usbglove_v1\usbd_custom_hid_if.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
 sy_usbglove_v1\usbd_custom_hid_if.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
+sy_usbglove_v1\usbd_custom_hid_if.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 sy_usbglove_v1\usbd_custom_hid_if.o: ../Inc/thread_usbframe_process.h
 sy_usbglove_v1\usbd_custom_hid_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 sy_usbglove_v1\usbd_custom_hid_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h

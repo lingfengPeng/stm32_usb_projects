@@ -42,3 +42,4 @@ sy_usbglove_v1\usb_device.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc
 sy_usbglove_v1\usb_device.o: ../Inc/usbd_desc.h
 sy_usbglove_v1\usb_device.o: ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h
 sy_usbglove_v1\usb_device.o: ../Inc/usbd_custom_hid_if.h
+sy_usbglove_v1\usb_device.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h

@@ -350,7 +350,28 @@ static int8_t USBD_CUSTOM_HID_SendReport_FS(uint8_t *report, uint16_t len)
 /* USER CODE END 7 */
 
 /* USER CODE BEGIN PRIVATE_FUNCTIONS_IMPLEMENTATION */
-
+void user_usb_print(const char *fmt, ...)
+{
+	va_list list;
+	char buf[32];
+	va_start(list, fmt);
+	uint8_t len = vsnprintf(buf, 32, (char *)fmt, list);
+	va_end(list);
+	
+	USBD_CUSTOM_HID_HandleTypeDef     *hhid = (USBD_CUSTOM_HID_HandleTypeDef*)&hUsbDeviceFS.pClassData;
+	
+	if(hUsbDeviceFS.dev_state == USBD_STATE_CONFIGURED )
+	{
+		if(hhid->state == CUSTOM_HID_IDLE)
+		{
+			if(len > 0)
+			{
+				USBD_CUSTOM_HID_SendReport(&hUsbDeviceFS, 1, (uint8_t*)buf, len);
+			}
+		}
+	}
+	
+}
 /* USER CODE END PRIVATE_FUNCTIONS_IMPLEMENTATION */
 /**
   * @}
