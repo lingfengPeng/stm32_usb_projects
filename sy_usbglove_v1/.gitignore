@@ -1,9 +1,3 @@
 /Drivers/
 /*.mxproject
-/*.o
-/*.d
-/*.crf
-/*.dep
-/startup_stm32f103xb.lst
-/*.uvoptx
-/DebugConfig/
+/Middlewares/
